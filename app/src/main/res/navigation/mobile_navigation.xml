@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_location">
+
+    <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.cleanerworld.ecoville.ui.location.LocationFragment"
+        tools:layout="@layout/fragment_location" />
+
+    <fragment
+        android:id="@+id/navigation_recycle"
+        android:name="com.cleanerworld.ecoville.ui.recycle.RecycleFragment"
+        tools:layout="@layout/fragment_recycle" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.cleanerworld.ecoville.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.cleanerworld.ecoville.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.cleanerworld.ecoville.ui.add.AddFragment"
+        tools:layout="@layout/fragment_add" />
+</navigation>
