@@ -15,7 +15,7 @@ From Android Studio:
 ## Maintainers
 This project is mantained by:
 * [Emilio](http://github.com/emilio-kariuki)
-* [Pam] (http://github.com/Chemutaiselim)
+* [Pam](http://github.com/Chemutaiselim)
 
 
 ## Contributing
