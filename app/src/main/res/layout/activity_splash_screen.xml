@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ui.welcome.SplashScreenActivity">
 
-    <Button
-        android:id="@+id/splash_screen_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go to walkout screens"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/official_logo_img"
+        android:layout_width="171dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/official_logo" />
+
+    <ImageView
+        android:id="@+id/ecoville_img"
+        android:layout_width="185dp"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/official_logo_img"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/official_logo_img"
+        app:layout_constraintTop_toBottomOf="@+id/official_logo_img"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@drawable/ecoville" />
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
