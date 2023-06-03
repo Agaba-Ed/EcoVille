@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ice_cream" android:id="@+id/ic_collect"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="144dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.496"/>
+    <TextView
+            android:text="@string/collect_text"
+            android:layout_width="wrap_content"
+            android:textColor="@color/ecoville_grey"
+            android:layout_height="wrap_content" android:id="@+id/collect"
+            app:layout_constraintTop_toBottomOf="@+id/ic_collect" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="64dp"
+            android:textSize="36sp" android:textStyle="bold" app:layout_constraintHorizontal_bias="0.492"/>
+    <TextView
+            android:text="@string/collect_description_text"
+            android:layout_width="224dp"
+            android:layout_height="75dp" android:id="@+id/collect_description"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/collect" android:layout_marginTop="40dp"
+            android:textSize="18sp" app:layout_constraintHorizontal_bias="0.497"/>
+    <ImageView
+
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+             app:srcCompat="@drawable/circular_shape" android:id="@+id/prog_1"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/collect_description"
+            android:layout_marginTop="32dp" android:layout_marginStart="168dp"/>
+    <ImageView
+
+    android:layout_width="34dp"
+    android:layout_height="14dp"
+    app:srcCompat="@drawable/rounded_rect" android:id="@+id/prog_2"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@+id/prog_1" app:layout_constraintTop_toTopOf="@+id/prog_1"/>
+    <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp" app:srcCompat="@drawable/circular_shape" android:id="@+id/prog_3"
+            app:layout_constraintStart_toEndOf="@+id/prog_2" app:layout_constraintTop_toTopOf="@+id/prog_2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.118"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

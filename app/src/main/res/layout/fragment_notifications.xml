@@ -5,18 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
-
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/notifications_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/notifications_image"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/notif_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/notifications_image"
+            app:layout_constraintTop_toTopOf="@+id/notifications_image"
+            android:text="@string/notifications_text"
+            android:textColor="#1A1F36"
+            android:textSize="14sp" android:layout_marginStart="8dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/all_notifs_text"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/notif_text"
+            app:layout_constraintTop_toTopOf="@+id/notif_text"
+            android:text="@string/all_notifications"
+            android:textColor="#9EA0AA"
+            android:textSize="12sp" android:layout_marginStart="8dp"/>
+    <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/notifications_down_arrow"
+            android:layout_width="5dp"
+            android:layout_height="3dp"
+            android:src="@drawable/ic_notifications_down_arrow"
+            app:layout_constraintTop_toTopOf="@+id/all_notifs_text"
+            app:layout_constraintStart_toEndOf="@+id/all_notifs_text"
+            android:layout_marginStart="4dp" android:layout_marginTop="8dp"/>
+    <com.google.android.material.imageview.ShapeableImageView
+            android:src="@drawable/ic_notif_mark"
+            android:layout_width="6dp"
+            android:layout_height="5dp" android:id="@+id/notificaton_mark_all"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginEnd="8dp"/>
+    <com.google.android.material.textview.MaterialTextView
+            android:text="@string/mark_all_as_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#1A1F36"
+            android:id="@+id/mark_all_as_read_text"
+            app:layout_constraintEnd_toStartOf="@+id/notificaton_mark_all"
+            app:layout_constraintTop_toTopOf="@+id/notificaton_mark_all"
+            android:layout_marginEnd="8dp"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

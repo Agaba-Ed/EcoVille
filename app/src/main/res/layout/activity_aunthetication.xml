@@ -1,29 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.authentication.AuntheticationActivity">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".ui.authentication.AuntheticationActivity">
 
-    <Button
-        android:id="@+id/login_option_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
-        android:text="@string/login_button_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/register_option_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_option_button" />
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_option_button"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:text="@string/login_button_text"
+            app:cornerRadius="10px"
+            app:layout_constraintBottom_toTopOf="@+id/register_option_button" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginBottom="8dp"/>
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_option_button"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/register_button_text"
+            app:cornerRadius="10px"
+            app:layout_constraintBottom_toTopOf="@+id/option_text" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginBottom="16dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/auth_header" android:background="@drawable/authentication_header_background"
+            app:layout_constraintBottom_toTopOf="@+id/login_option_button" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="1.0">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/official_logo"
+                android:id="@+id/official_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/login_"
+                app:layout_constraintEnd_toStartOf="@+id/login_" android:layout_marginEnd="8dp"/>
+        <TextView
+                android:text="@string/ecoville_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/login_"
+                android:textSize="28sp" android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/imageView3"
+                android:layout_marginBottom="32dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.493" app:layout_constraintStart_toStartOf="parent"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/reading_side" android:id="@+id/imageView3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="32dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+            android:layout_width="110dp"
+            android:layout_height="1dp" android:id="@+id/view"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/option_text"
+            app:layout_constraintStart_toStartOf="@+id/gmail_"/>
+    <TextView
+            android:text="@string/option_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/option_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/gmail_"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toEndOf="@+id/view" app:layout_constraintEnd_toStartOf="@+id/view2"/>
+    <View
+            android:layout_width="100dp"
+            android:layout_height="1dp" android:id="@+id/view2"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/option_text"
+            app:layout_constraintEnd_toEndOf="@+id/gmail_"/>
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/google_text"
+            android:drawableLeft="@drawable/grommet_icons_google"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="54dp" android:id="@+id/gmail_"
+            app:cornerRadius="10px"
+            app:layout_constraintBottom_toTopOf="@+id/facebook_" android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/facebook_text"
+            app:cornerRadius="10px"
+            android:drawableLeft="@drawable/facebook"
+            app:backgroundTint="@color/facebook_blue"
+            android:layout_width="0dp"
+            android:layout_height="54dp" android:id="@+id/facebook_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

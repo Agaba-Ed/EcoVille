@@ -1,22 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.recycle.RecycleFragment">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".ui.recycle.RecycleFragment">
 
-    <TextView
-        android:id="@+id/text_recycle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/white"
+
+    >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/search_container"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="5dp"
+
+                android:layout_margin="10dp"
+
+                android:background="@drawable/search_background_grey">
+
+            <androidx.appcompat.widget.SearchView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:id="@+id/sv_location"
+                    app:queryHint="@string/search_hint"
+                    app:iconifiedByDefault="false"
+                    android:layout_weight="2"
+            />
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/search_bar_end"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+
+
+            />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            app:tabPaddingBottom="@dimen/tab_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar"
+            tools:ignore="SpeakableTextPresentCheck"/>
+    <androidx.recyclerview.widget.RecyclerView android:layout_width="0dp" android:layout_height="0dp"
+                                               android:paddingBottom="?actionBarSize"
+                                               app:layout_constraintEnd_toEndOf="parent"
+                                               app:layout_constraintStart_toStartOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+                                               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                               android:id="@+id/waste_item_recycler_view"
+
+                                               tools:listitem="@layout/waste_item"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,4 +9,47 @@
     <string name="title_profile">Profile</string>
     <string name="login_button_text">Login</string>
     <string name="register_button_text">Register</string>
+    <string name="dispose_text">Dispose</string>
+    <string name="dispose_description_text">
+        Venenatis netus lorem risus, at dictum. Id faucibus viverra in.
+    </string>
+    <string name="collect_text">Collect</string>
+    <string name="collect_description_text">
+        Sed fames lobortis dignissim nisi. Viverra magna urna imperdiet.
+    </string>
+    <string name="recycle_text">Recycle</string>
+    <string name="recycle_description_text">Sollicitudin ipsum risus nulla nec purus sagittis felis ipsum sit. Tellus
+        ac.
+    </string>
+    <string name="ecoville_text">EcoVille</string>
+    <string name="option_text">Or login with</string>
+    <string name="google_text">Google</string>
+    <string name="facebook_text">Facebook</string>
+    <string name="email_textview">email</string>
+    <string name="email_hint">yourmail@gmail.com</string>
+    <string name="password_textview">password</string>
+    <string name="password_hint">your password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register">Don\'t have an account? Register.</string>
+    <string name="login_option">Already have an account? Login</string>
+    <string name="or_sign_up_with">Or sign up with</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search for plastics, glasses, bottles</string>
+    <string name="nav_home">Plastic</string>
+    <string name="waste_item_name">Plastic Cups</string>
+    <string name="waste_item_location">Dedan Kimathi, Nyeri</string>
+    <string name="waste_item_distance">8000km</string>
+    <string name="waste_title_text">Title</string>
+    <string name="waste_title_hint">Summary of the waste</string>
+    <string name="waste_description_text">Description</string>
+    <string name="waste_description_hint">Description of the waste...</string>
+    <string name="waste_type_text">Type of Waste</string>
+    <string name="waste_location_text">Location</string>
+    <string name="waste_location_hint">Enter Location</string>
+    <string name="waste_images_text">Images</string>
+    <string name="post_button">Post</string>
+    <string name="notifications_text">Notifications</string>
+    <string name="all_notifications">All</string>
+    <string name="mark_all_as_read">Mark all as read</string>
+    <string name="waste_type_dropdown_text">Waste type</string>
 </resources>

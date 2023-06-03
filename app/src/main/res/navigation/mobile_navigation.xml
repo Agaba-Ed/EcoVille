@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_location"
-        android:name="com.cleanerworld.ecoville.ui.location.LocationFragment"
+        android:name="com.cleanworld.ecoville.ui.location.LocationFragment"
         tools:layout="@layout/fragment_location" />
 
     <fragment
@@ -18,7 +18,6 @@
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.cleanerworld.ecoville.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_profile"

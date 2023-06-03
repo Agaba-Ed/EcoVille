@@ -1,19 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.authentication.register.RegisterActivity">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".ui.authentication.register.RegisterActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/auth_header" android:background="@drawable/authentication_header_background"
+            app:layout_constraintBottom_toTopOf="@+id/email_textview" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/strolling" android:id="@+id/imageView3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:text="@string/register_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView"
+                android:textSize="34sp"
+                android:textColor="@color/white" android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="64dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp"/>
+        <ImageView
+                android:layout_width="6dp"
+                android:layout_height="12dp" app:srcCompat="@drawable/ic_back_arrow"
+                android:id="@+id/imageView" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <Button
-        android:id="@+id/register_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/register_button"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:text="@string/register_button_text"
+            tools:ignore="UsingOnClickInXml"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tLogin"
+            android:layout_marginBottom="16dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="@string/email_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/email_textview"
+            android:textColor="@color/dark_grey" android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress" android:layout_marginBottom="4dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:id="@+id/editTextTextEmailAddress"
+            android:backgroundTint="@color/edittext_background"
+            android:background="@color/edittext_background"
+            app:layout_constraintBottom_toTopOf="@+id/password_textview"
+            app:layout_constraintStart_toStartOf="@+id/password_textview" android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword">
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:ems="10"
+
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_hint" tools:ignore="TouchTargetSizeCheck"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+            android:text="@string/password_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/password_textview"
+            android:textColor="@color/dark_grey" android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" android:layout_marginBottom="4dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            app:passwordToggleEnabled="true"
+            android:id="@+id/editTextTextPassword"
+            android:background="@drawable/editext_background"
+            app:layout_constraintBottom_toTopOf="@+id/register_button"
+            app:layout_constraintEnd_toEndOf="@+id/register_button"
+            app:layout_constraintStart_toStartOf="@+id/register_button" android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:ems="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword" tools:ignore="TouchTargetSizeCheck"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+            android:text="@string/login_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/tLogin"
+            android:textSize="16sp"
+            android:textColor="@color/ecoville_primary" android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"/>
+    <!---
+
+    <View
+            android:layout_width="110dp"
+            android:layout_height="1dp" android:id="@+id/view"
+            android:background="@color/grey"
+            tools:layout_editor_absoluteY="636dp" tools:layout_editor_absoluteX="8dp"/>
+    <TextView
+            android:text="@string/or_sign_up_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/option_text"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteY="621dp" tools:layout_editor_absoluteX="170dp"/>
+    <View
+            android:layout_width="100dp"
+            android:layout_height="1dp" android:id="@+id/view2"
+            android:background="@color/grey"
+            tools:layout_editor_absoluteY="636dp" tools:layout_editor_absoluteX="303dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+            android:src="@drawable/grommet_icons_google"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="194dp"
+            android:layout_height="54dp" android:id="@+id/gmail_"
+            app:cornerRadius="10px"
+            tools:layout_editor_absoluteY="645dp" tools:layout_editor_absoluteX="8dp"/>
+    <androidx.appcompat.widget.AppCompatImageButton
+            android:src="@drawable/facebook"
+            app:cornerRadius="10px"
+            app:backgroundTint="@color/facebook_blue"
+            android:layout_width="194dp"
+            android:layout_height="54dp" android:id="@+id/facebook_"
+            tools:layout_editor_absoluteY="645dp" tools:layout_editor_absoluteX="210dp"/>
+            -->
 </androidx.constraintlayout.widget.ConstraintLayout>

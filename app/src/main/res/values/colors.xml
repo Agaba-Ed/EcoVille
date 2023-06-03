@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="ecoville_grey">#545454</color>
+    <color name="ecoville_light_grey">#979797
+    </color>
+    <color name="ecoville_light_green">#9FE600</color>
+    <color name="ecoville_primary">#7EB506</color>
+    <color name="grey">#828282</color>
+    <color name="facebook_blue">#606FBCEB
+    </color>
+    <color name="dark_grey">#333333</color>
+    <color name="edittext_background">#F2F2F2</color>
+    <color name="waste_item_location_color">#87C302
+    </color>
+    <color name="waste_item_distance_color"> #BDBDBD
+    </color>
+    <color name="white_transparent">#ffffffff</color>
 </resources>

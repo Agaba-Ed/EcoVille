@@ -8,25 +8,21 @@
 
 
     <ImageView
-        android:id="@+id/official_logo_img"
-        android:layout_width="171dp"
-        android:layout_height="171dp"
-        android:layout_marginTop="148dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/official_logo" />
-
+            android:layout_width="171dp"
+            android:layout_height="171dp" app:srcCompat="@drawable/green_official_logo"
+            android:id="@+id/official_logo_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="148dp"/>
     <ImageView
-        android:id="@+id/ecoville_img"
-        android:layout_width="185dp"
-        android:layout_height="61dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/official_logo_img"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/official_logo_img"
-        app:layout_constraintTop_toBottomOf="@+id/official_logo_img"
-        app:layout_constraintVertical_bias="0.078"
-        app:srcCompat="@drawable/ecoville" />
+            android:layout_width="185dp"
+            android:layout_height="61dp"
+            app:srcCompat="@drawable/ecoville"
+            android:id="@+id/ecoville_img"
+            app:layout_constraintEnd_toEndOf="@+id/official_logo_img"
+            app:layout_constraintStart_toStartOf="@+id/official_logo_img"
+            app:layout_constraintTop_toBottomOf="@+id/official_logo_img"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.078"/>
     />
 </androidx.constraintlayout.widget.ConstraintLayout>

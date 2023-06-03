@@ -1,22 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?actionBarSize"
+        tools:context=".ui.add.AddFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.add.AddFragment">
 
     <TextView
-        android:id="@+id/text_add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:text="@string/waste_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:id="@+id/waste_title_text" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="@color/black"/>
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            app:layout_constraintStart_toStartOf="@+id/waste_title_text"
+            android:id="@+id/waste_title_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/waste_title_text"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="@string/waste_title_hint"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+            android:text="@string/waste_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/waste_title_edittext"
+            app:layout_constraintStart_toStartOf="@id/waste_title_edittext" android:layout_marginTop="16dp"
+           android:id="@+id/waste_description_text" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="@color/black"/>
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="189dp"
+            android:id="@+id/waste_description_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/waste_description_text"
+            app:layout_constraintStart_toStartOf="@+id/waste_description_text"
+            app:layout_constraintEnd_toEndOf="@+id/waste_title_edittext" android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:hint="@string/waste_description_hint"
+                android:ems="360"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+            android:text="@string/waste_type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/waste_description_edittext"
+            app:layout_constraintStart_toStartOf="@id/waste_description_edittext" android:layout_marginTop="16dp"
+            android:id="@+id/waste_type_text" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="@color/black"/>
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:hint="@string/waste_type_dropdown_text"
+            app:layout_constraintStart_toStartOf="@+id/waste_type_text"
+            android:id="@+id/waste_type_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/waste_type_text" android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/waste_description_edittext"
+    >
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/waste_type_drop_down"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+               />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+            android:text="@string/waste_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/waste_type_spinner"
+            app:layout_constraintStart_toStartOf="@id/waste_type_spinner" android:layout_marginTop="16dp"
+            android:id="@+id/waste_location_text" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="@color/black"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            app:layout_constraintStart_toStartOf="@+id/waste_location_text"
+            android:id="@+id/waste_location_edittext" app:layout_constraintTop_toBottomOf="@+id/waste_location_text"
+            android:layout_marginTop="8dp" app:layout_constraintEnd_toEndOf="@id/waste_type_spinner" android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:id="@+id/wasteLocationInputField"
+                android:hint="@string/waste_location_hint"
+                android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/places_auto_complete_recyclerview"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/waste_location_edittext"
+              app:layout_constraintStart_toStartOf="@id/waste_location_edittext"
+              app:layout_constraintEnd_toEndOf="@id/waste_location_edittext"
+
+    />
+
+    <TextView
+            android:text="@string/waste_images_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/places_auto_complete_recyclerview"
+            app:layout_constraintStart_toStartOf="@id/places_auto_complete_recyclerview" android:layout_marginTop="16dp"
+            android:id="@+id/waste_images_text" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="@color/black"/>
+    <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/waste_images_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            app:layout_constraintStart_toStartOf="@+id/waste_images_text"
+            app:layout_constraintTop_toBottomOf="@+id/waste_images_text"
+            app:layout_constraintEnd_toEndOf="@+id/waste_location_edittext"
+
+            android:layout_marginTop="8dp" />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/waste_images_recyclerview"
+             app:layout_constraintStart_toStartOf="@+id/waste_images_recyclerview"
+            app:layout_constraintEnd_toEndOf="@+id/waste_images_recyclerview"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" android:id="@+id/wasteImagesIndicatorContainer"/>
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/post_button"
+            android:layout_width="251dp"
+            android:layout_height="54dp"
+            android:text="@string/post_button"
+            app:layout_constraintStart_toStartOf="@id/wasteImagesIndicatorContainer"
+            app:layout_constraintTop_toBottomOf="@id/wasteImagesIndicatorContainer"
+            app:layout_constraintEnd_toEndOf="@id/wasteImagesIndicatorContainer"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="10dp"
+    />
+    <ImageView
+            android:src="@drawable/ic_add_a_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/add_a_photo"
+            app:layout_constraintEnd_toEndOf="@+id/waste_images_recyclerview"
+            app:layout_constraintTop_toTopOf="@+id/waste_images_text"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
